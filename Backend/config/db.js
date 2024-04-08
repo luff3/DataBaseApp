@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 // Підключення до бази даних
-const sequelize = new Sequelize('SampleDatabase', 'vasyll', '13022004', {
+const sequelize = new Sequelize('NikeShop', 'vasyll', '13022004', {
     host: 'localhost',
     dialect: 'mssql',
     dialectOptions: {
