@@ -1,0 +1,126 @@
+.content-container {
+    background: linear-gradient(45deg, #f9f8f9, #e6e2e9, #e0e7eb, #dde7ec);
+    width: 80%;
+}
+
+.header-section{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-text{
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 3.5rem;
+    color: #534764;
+}
+
+.user-pic{
+    opacity: 0.7;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.user-section {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.image-header-container{
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #534764;
+}
+
+.log-out-button {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: 0.5rem;
+    border: none; 
+    background-color: rgba(178, 160, 180, 0.151);
+    border-radius: 0.75rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-out-icon {
+    font-size: 28px; 
+    color: #534764;
+}
+
+.user-role{
+    color: #6D617D;
+    font-size: 18px;
+}
+
+.main-section {
+    display: flex;
+    flex-grow: 1; 
+    flex-direction: column;
+    width: 100%;
+}
+
+.buttons-section{
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-right: 2rem;
+}
+
+.buttons-add {
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #cabfe9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.buttons-download {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #cabfe9;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.button-text{
+    font-size: 18px;
+    font-weight: 500;
+    color: #534764;
+}
+
+.table-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

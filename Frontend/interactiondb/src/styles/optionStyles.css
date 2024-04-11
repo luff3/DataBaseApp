@@ -1,0 +1,25 @@
+.option-button:first-child {
+    background: linear-gradient(45deg, #C7B2E5, #BFB3E1, #B0B6DC);
+}
+
+.option-button {
+    height: 3.25rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    gap: 1rem;
+    border-radius: 1.5rem;
+}
+
+.option-icon {
+    color: #6D617D; 
+    font-size: 26px; 
+}
+
+.option-text {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #6D617D;
+}
