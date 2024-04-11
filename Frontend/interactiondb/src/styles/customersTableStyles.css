@@ -1,0 +1,30 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+
+  .table th {
+    background-color: #cabfe9;
+    border: 1px solid #ccc; 
+    padding: 8px;
+    text-align: left;
+    color: #534764; 
+  }
+  
+
+  .table td {
+    border: 1px solid #ccc; 
+    padding: 8px;
+    text-align: left;
+    color: #534764; 
+    
+  }
+  
+  .even-row {
+    background-color: #e7e7e7; 
+  }
+  
+  .odd-row {
+    background-color: #dadada; 
+  }
