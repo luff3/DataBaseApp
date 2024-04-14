@@ -68,8 +68,9 @@ exports.getCustomerById = async (req, res) => {
 exports.createCustomer = async (req, res) => {
     try {
         console.log('Creating a new customer');
-        console.log(req.body);
-        const { customer_id, first_name, last_name, email, phone} = req.body;
+        const { customer_id } = req.body;
+        const customerID = customer_id.customer_id;
+        const { first_name, last_name, email, phone} = customer_id;
         if (!customer_id || !first_name || !last_name || !email || !phone) {
             return res.status(400).json({
                 error: 'Something is missing',
@@ -77,7 +78,7 @@ exports.createCustomer = async (req, res) => {
         }
     
         const newCustomer = await Customer.create({
-            customer_id,
+            customerID,
             first_name,
             last_name,
             email,

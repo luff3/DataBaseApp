@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { getAccessToken } from './getAccessToken.js';
-import checkErrorAndNotify from './checkError.js';
-
-const API_URL = 'http://localhost:3000/product';
 
 
+const API_URL = 'http://localhost:3000/customer';
 
 
-export const getProductData = async (accessToken) => {
+
+
+export const getCustomerData = async () => {
     try {
         const token = getAccessToken();
         const response = await axios.get(API_URL, {
@@ -17,12 +17,12 @@ export const getProductData = async (accessToken) => {
         });
         return response.data;
 } catch (error) {
-    console.error('Error fetching product data:', error);
+    console.error('Error fetching custmer data:', error);
     throw error;
     }
 };
 
-export const getProductById = async (id) => {
+export const getCustomerById = async (id) => {
     try {
         const token = getAccessToken();
         const response = await axios.get(`${API_URL}/${id}`, {
@@ -30,15 +30,14 @@ export const getProductById = async (id) => {
                 Authorization: `Bearer ${token}` 
             }
         });
-        console.log('In getProductById', response.data);
         return response.data;
     } catch (error) {
-        console.error(`Error fetching product with id ${id}:`, error);
+        console.error(`Error fetching customer with id ${id}:`, error);
         throw error;
     }
 }
 
-export const updateProduct= async (id, productData) => {
+export const updateCustomer= async (id, productData) => {
     try {
         const token = getAccessToken();
         const url = `${API_URL}/${id}`;
@@ -48,20 +47,20 @@ export const updateProduct= async (id, productData) => {
             }
         });
     } catch (error) {
-        console.error(`Error updating product with id ${id}:`, error);
+        console.error(`Error updating customer with id ${id}:`, error);
         throw error;
     }
 };
 
 
-export const addProduct = async (product_id, product_name, amount, product_specific_id, supplier_id) => {
+export const addCustomer = async (customer_id, first_name, last_name, email, phone) => {
     const token = getAccessToken();
     const data ={
-        "product_id": product_id,
-        "product_name": product_name,
-        "amount": amount,
-        "product_specific_id": product_specific_id,
-        "supplier_id": supplier_id
+        "customer_id": customer_id,
+        "first_name": first_name,
+        "last_name": last_name,
+        "email": email,
+        "phone": phone
     }
 
     try {
@@ -74,7 +73,7 @@ export const addProduct = async (product_id, product_name, amount, product_speci
             console.log(response.status);
             return true; 
         }else{
-            throw new Error(`Error adding product`);
+            throw new Error(`Error adding customer`);
         }
   
     } catch (error) {
@@ -82,7 +81,7 @@ export const addProduct = async (product_id, product_name, amount, product_speci
         throw error;
     }
 };
-export const deleteProduct = async (id) => {
+export const deleteCustomer = async (id) => {
     try {
         const token = getAccessToken();
         const response = await axios.delete(`${API_URL}/${id}`,{
@@ -93,7 +92,7 @@ export const deleteProduct = async (id) => {
         if (response.status === 204) {
         return true; 
     }
-        throw new Error(`Error deleting product with id ${id}`);
+        throw new Error(`Error deleting customer with id ${id}`);
     } catch (error) {
         console.error(`Error deleting customer with id ${id}:`, error.response.data.message);
         

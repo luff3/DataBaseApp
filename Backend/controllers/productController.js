@@ -69,21 +69,28 @@ exports.createProduct = async (req, res) => {
     try {
         console.log('Creating a new product');
         
-        const { product_id, product_name, amount, product_specific_id, supplier_id} = req.body;
+       
+        const { product_id } = req.body;
+        console.log(product_id);
+        const productID = product_id.product_id;
+        
+        // Розпаковуємо значення product_id
+        const { product_name, amount, product_specific_id, supplier_id } = product_id;
+        console.log(product_name, amount, product_specific_id, supplier_id);
+
         if (!product_id || !product_name || !amount || !product_specific_id || !supplier_id) {
+            console.log( product_id, product_name, amount, product_specific_id, supplier_id);
             return res.status(400).json({
                 error: 'Something is missing',
             });
         }
 
         const newProduct = await Product.create({
-            product_id,
+            productID,
             product_name,
             amount,
             product_specific_id,
             supplier_id
-        },{
-        fields: ['product_id', 'product_name', 'amount', 'product_specific_id', 'supplier_id' ]
         });
 
         const responseBody = {
