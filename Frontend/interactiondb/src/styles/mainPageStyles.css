@@ -1,5 +1,8 @@
 .main-container{
-    background-color: rgb(154, 98, 117);
+    background-image: url('../images/nikegirl.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right; 
     display: flex;
     flex-direction: row;
     width: 100%;

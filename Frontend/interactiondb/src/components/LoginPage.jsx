@@ -41,8 +41,8 @@ const LoginPage = ({ onLogin }) => {
         <div className="login-container">
             <ToastContainer /> 
             <form className="login-form" onSubmit={handleSubmit}>
-                <h2 className="login-title">Увійти</h2>
-                <div>
+                <h2 className="login-title">Log in</h2>
+                <div className='input-container'>
                     <input
                         type="text"
                         id="username"
@@ -50,11 +50,11 @@ const LoginPage = ({ onLogin }) => {
                         value={formData.user} // залишили як user
                         onChange={handleChange}
                         className="login-input"
-                        placeholder="Логін"
+                        placeholder="Login"
                         required
                     />
                 </div>
-                <div>
+                <div className='input-container'>
                     <input
                         type="password"
                         id="password"
@@ -62,11 +62,13 @@ const LoginPage = ({ onLogin }) => {
                         value={formData.pwd} // залишили як pwd
                         onChange={handleChange}
                         className="login-input"
-                        placeholder="Пароль"
+                        placeholder="Password"
                         required
                     />
                 </div>
-                <button type="submit" className="login-button">Увійти</button>
+                <div className='button-container'>
+                     <button type="submit" className="login-button">Увійти</button>
+                </div>
             </form>
         </div>
     );

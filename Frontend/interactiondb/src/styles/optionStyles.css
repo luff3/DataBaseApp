@@ -1,4 +1,4 @@
-.option-button:first-child {
+.option-button.active {
     background: linear-gradient(45deg, #C7B2E5, #BFB3E1, #B0B6DC);
 }
 
