@@ -30,29 +30,27 @@ const LoginPage = () => {
         <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
             <h2 className="login-title">Увійти</h2>
-            <div>
-            <input
-                type="text"
-                id="username"
-                name="username"
-                value={formData.username}
-                onChange={handleChange}
-                className="login-input"
-                placeholder="Логін"
-                required
-            />
-            </div>
-            <div>
-            <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className="login-input"
-                placeholder="Пароль"
-                required
-            />
+            <div className='login-input-container'>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    value={formData.username}
+                    onChange={handleChange}
+                    className="login-input"
+                    placeholder="Логін"
+                    required
+                />
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                    className="login-input"
+                    placeholder="Пароль"
+                    required
+                />
             </div>
             <button type="submit" className="login-button">Увійти</button>
         </form>

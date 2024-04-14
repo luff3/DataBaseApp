@@ -8,7 +8,7 @@ const MainPage = () => {
     return(
         <div className='main-container'>
             <Sidebar></Sidebar>
-            <ContentSection></ContentSection>
+             <ContentSection></ContentSection>
         </div>
     );
 }
