@@ -6,20 +6,18 @@ import manAvatar from '../images/man-avatar.png';
 import '../styles/customersTableStyles.css'; 
 
 
-const ContentSection = ({ text, icon: Icon }) => { 
+const OrderItemSection = ({ text, icon: Icon }) => { 
     const dataTable = [
-        { customerId: 1, firstName: 'John', lastName: 'Doe', email: 'john.doe@example.com', phone: '123-456-7890' },
-        { customerId: 2, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', phone: '987-654-3210' },
-        { customerId: 2, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', phone: '987-654-3210' },
-        { customerId: 2, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', phone: '987-654-3210' },
-        { customerId: 2, firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', phone: '987-654-3210' },
-        // Add more data as needed
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+
     ];
     
     return(
         <div className='content-container'>
             <div className='header-section'>
-                <a className='header-text'>Customers</a>
+                <a className='header-text'>OrderItems</a>
                 <div className='user-section'>
                     <div className='image-header-container'>
                         <img  src={manAvatar} alt='nike logo' className='user-pic'/> 
@@ -35,28 +33,24 @@ const ContentSection = ({ text, icon: Icon }) => {
             </div>
             <div className='main-section'>
                 <div className='buttons-section'>
-                    <button className='buttons-add'><a className='button-text'>Add Customer</a></button>
+                    <button className='buttons-add'><a className='button-text'>Add OrderItem</a></button>
                     <button className='buttons-download'><a className='button-text'>Download</a></button>
                 </div>
                 <div className='table-section'>
                     <table className='table'>
                         <thead>
                             <tr>
-                                <th style={{ width: '10%' }}>Customer ID</th>
-                                <th style={{ width: '18%' }}>First Name</th>
-                                <th style={{ width: '18%' }}>Last Name</th>
-                                <th style={{ width: '26%' }}>Email</th>
-                                <th style={{ width: '18%' }}>Phone</th>
+                                <th style={{ width: '33.33%' }}>OrderItem ID</th>
+                                <th style={{ width: '33.33%' }}>Order ID</th>
+                                <th style={{ width: '33.33%' }}>Product ID</th>
                             </tr>
                         </thead>
                         <tbody>
                             {dataTable.map((data, index) => (
                                 <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                                    <td>{data.customerId}</td>
-                                    <td>{data.firstName}</td>
-                                    <td>{data.lastName}</td>
-                                    <td>{data.email}</td>
-                                    <td>{data.phone}</td>
+                                    <td>{data.order_item_id}</td>
+                                    <td>{data.order_id}</td>
+                                    <td>{data.product_id}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -68,7 +62,7 @@ const ContentSection = ({ text, icon: Icon }) => {
 }
 
 
-export default ContentSection;
+export default OrderItemSection;
 
 
 

@@ -7,7 +7,7 @@ const dbPassword = '';
 const db = process.env.DATABASE.replace('<PASSWORD>', dbPassword);
 mongoose.set('debug', true);
 mongoose.connect(db).then(() => {
-     console.log('Db connection is successful');
+        console.log('Db connection is successful');
 });
 const port = 3000;
 
