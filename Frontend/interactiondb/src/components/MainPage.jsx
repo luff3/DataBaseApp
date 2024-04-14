@@ -8,6 +8,8 @@ import EmployeeSection from './EmployeeSection.jsx';
 import OrderSection from './OrderSection.jsx';
 import OrderItemSection from './OrdetItemSection.jsx';
 import LoginPage from './LoginPage.jsx'
+import manAvatar from '../images/man-avatar.png';
+
 const MainPage = () => {
     const [isAuthenticated, setIsAuthenticated] = useState("");
 

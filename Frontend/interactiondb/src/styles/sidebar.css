@@ -35,4 +35,6 @@
 }
 
 
-
+.option-link {
+    text-decoration: none; /* Видалення підкреслення з лінків */
+}
