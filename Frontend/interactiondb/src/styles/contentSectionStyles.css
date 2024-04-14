@@ -7,6 +7,7 @@
     right: 0;
     top:0;
     height: 100%;
+    overflow-y: auto;
 }
 
 .header-section{
@@ -16,6 +17,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom:  1.5rem;
 }
 
 .header-text{
@@ -129,4 +132,5 @@
     margin-top: 0.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-bottom: 5rem;
 }
