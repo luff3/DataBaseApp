@@ -4,47 +4,64 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     height: 100vh;
-    background-color: #333; /* Темний фон */
+    background: linear-gradient(45deg, #C7B2E5, #BFB3E1, #B0B6DC);
 }
 
 /* Збільшення ширини та додавання падінгу для форми */
 .login-form {
-    width: 350px; /* Збільшення ширини форми */
-    padding: 30px; /* Додавання падінгу */
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    width: 30%;
+    height: 40%;
+    background-color: rgba(251, 251, 251, 0.562); /* Задаємо фон з напівпрозорістю */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    align-items: center;
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Решта стилів залишаються незмінними */
 .login-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 26px;
     text-align: center;
+    margin-bottom: 40px;
+    color: #534764;
+}
+
+.input-container{
+    width: 70%;
+}
+
+.button-container{
+    width: 70%;
+    margin-top: 20px;
 }
 
 .login-input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 15px;
+    font-size: 18px;
 }
 
 .login-button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background: linear-gradient(45deg, #C7B2E5, #BFB3E1, #B0B6DC);
     border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 16px;
+    border-radius: 15px;
+    color: #534764;
+    font-weight: bold;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+    background: #b2aac3;
 }
