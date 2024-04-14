@@ -45,26 +45,28 @@ const UpdateProductModal = ({ show, onClose, productId, onUpdateSuccess }) => {
 
     return (
         <div className={`modal ${show ? 'show' : ''}`}>
-            <div className="modal-content">
+            <div className="modal-window">
                 <span className="close" onClick={onClose}>&times;</span>
-                <h2>Update Product</h2>
-                <div>
-                    <label>Product Name:</label>
-                    <input type="text" value={productName} onChange={e => setProductName(e.target.value)} />
+                <div className='modal-content'>
+                    <a className='head-text text-style'>Update Product</a>
+                    <div className='property-section'>
+                        <label className='label text-style'>Product Name:</label>
+                        <input className='text-input text-style' type="text" value={productName} onChange={e => setProductName(e.target.value)} />
+                    </div>
+                    <div className='property-section'>
+                        <label className='label text-style'>Amount:</label>
+                        <input className='text-input text-style'  type="number" value={amount} onChange={e => setAmount(e.target.value)} />
+                    </div>
+                    <div className='property-section'>
+                        <label className='label text-style'>IProduct Spec ID:</label>
+                        <input  className='text-input text-style' type="text" value={productSpecificId} onChange={e => setProductSpecificId(e.target.value)} />
+                    </div>
+                    <div className='property-section'>
+                        <label className='label text-style'>	Supplier ID:</label>
+                        <input  className='text-input text-style' type="text" value={supplierId} onChange={e => setSupplierId(e.target.value)} />
+                    </div>
+                    <button className='button text-style' onClick={handleUpdate}>Update</button>
                 </div>
-                <div>
-                    <label>Amount:</label>
-                    <input type="number" value={amount} onChange={e => setAmount(e.target.value)} />
-                </div>
-                <div>
-                    <label>IProduct Spec ID:</label>
-                    <input type="text" value={productSpecificId} onChange={e => setProductSpecificId(e.target.value)} />
-                </div>
-                <div>
-                    <label>	Supplier ID:</label>
-                    <input type="text" value={supplierId} onChange={e => setSupplierId(e.target.value)} />
-                </div>
-                <button onClick={handleUpdate}>Update</button>
             </div>
         </div>
     );
