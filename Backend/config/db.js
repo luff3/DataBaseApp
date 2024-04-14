@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
-// khris 04012004
-const sequelize = new Sequelize('NikeShop', 'khriss', '123', {
+// khris 04012004 vasyll 13022004
+const sequelize = new Sequelize('NikeShop', 'vasyll', '13022004', {
     host: 'localhost',
     dialect: 'mssql',
     dialectOptions: {

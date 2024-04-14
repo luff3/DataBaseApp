@@ -71,7 +71,9 @@ exports.createEmployee = async (req, res) => {
     try {
         console.log('Creating a new employee');
         console.log(req.body);
-        const { employee_id, first_name, last_name, email, position, salary} = req.body;
+        const { employee_id } = req.body;
+        const employeeId = employee_id.employee_id;
+        const {first_name, last_name, email, position, salary} = employee_id;
         if (!employee_id || !first_name || !last_name || !email || !position || !salary) {
             return res.status(400).json({
                 error: 'Something is missing',
@@ -79,7 +81,7 @@ exports.createEmployee = async (req, res) => {
         }
     
         const newEmployee = await Employee.create({
-            employee_id,
+            employeeId,
             first_name,
             last_name,
             email,
