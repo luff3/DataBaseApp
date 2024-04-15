@@ -1,5 +1,6 @@
 const Customer = require('../models/customerModel.js')
-
+const path = require('path');
+const fs = require('fs');
 
 exports.getAllCustomers = async (req, res) => {
     try {
@@ -12,6 +13,12 @@ exports.getAllCustomers = async (req, res) => {
             email: customer.email,
             phone: customer.phone
         }));
+
+        const jsonContent = JSON.stringify(responseBody, null, 2);
+
+        const filePath = path.join(__dirname, '../documents/customers.json');
+    
+        fs.writeFileSync(filePath, jsonContent);
         
         res.status(200).json(responseBody);
     } catch (error) {

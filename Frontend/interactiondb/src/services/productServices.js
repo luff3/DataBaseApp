@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { getAccessToken } from './getAccessToken.js';
-import checkErrorAndNotify from './checkError.js';
+import { saveAs } from 'file-saver';
 
 const API_URL = 'http://localhost:3000/product';
 
@@ -21,7 +21,41 @@ export const getProductData = async (accessToken) => {
     throw error;
     }
 };
+export const downloadProduct = async () => {
+    try {
+        const token = getAccessToken();
+        const response = await axios.get(`${API_URL}/download`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            },
+            responseType: 'blob'
+        });
 
+        // Отримуємо ім'я файлу з заголовка Content-Disposition
+        console.log(response.headers);
+        // const contentDisposition = response.headers['Content-Disposition'];
+        // const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
+        // const fileName = fileNameMatch && fileNameMatch[1] ? fileNameMatch[1] : 'product.pdf';
+
+        // // Використовуємо функцію saveAs для збереження файлу
+        // saveAs(new Blob([response.data]), fileName);
+
+
+        const defaultFileName = 'product.pdf';
+
+        // Отримання імені файлу з URL або інших джерел відповіді
+        const urlParts = response.config.url.split('/');
+        const fileName = urlParts[urlParts.length - 1] || defaultFileName;
+
+        // Використовуємо функцію saveAs для збереження файлу
+        saveAs(new Blob([response.data]), fileName);
+        // Якщо потрібно повернути щось, можна це зробити
+        return true;
+    } catch (error) {
+        console.error('Error downloading product:', error);
+        throw error;
+    }
+}
 export const getProductById = async (id) => {
     try {
         const token = getAccessToken();
@@ -95,8 +129,34 @@ export const deleteProduct = async (id) => {
     }
         throw new Error(`Error deleting product with id ${id}`);
     } catch (error) {
-        console.error(`Error deleting customer with id ${id}:`, error.response.data.message);
+        console.error(`Error deleting downloading with id ${id}:`, error.response.data.message);
         
         throw error;
+    }
+};
+
+
+export const createAndDownloadPdf = async (data) => {
+    try {
+        const token = getAccessToken();
+        await axios.post(`${API_URL}/create-pdf`, data,{
+            headers: {
+                Authorization: `Bearer ${token}` 
+            }
+        });
+        const res = await axios.get(`${API_URL}/fetch-pdf`, {     
+        headers: {
+            Authorization: `Bearer ${token}` 
+        },
+            responseType: 'blob' 
+        });
+        const pdfBlob = new Blob([res.data], { 
+            type: 'application/pdf' 
+        });
+        saveAs(pdfBlob, 'products.pdf');
+        return true; // Повертаємо true у випадку успішного завершення
+    } catch (error) {
+        console.error('Error creating or downloading PDF:', error);
+        throw error; // Викидаємо помилку у випадку невдачі
     }
 };

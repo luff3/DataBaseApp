@@ -1,0 +1,58 @@
+[
+  {
+    "employee_id": 1,
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "michael.johnson@example.com",
+    "position": "Manager",
+    "salary": 50000
+  },
+  {
+    "employee_id": 2,
+    "first_name": "Jennifer",
+    "last_name": "Williams",
+    "email": "jennifer.williams@example.com",
+    "position": "Sales Associate",
+    "salary": 30000
+  },
+  {
+    "employee_id": 3,
+    "first_name": "David",
+    "last_name": "Martinez",
+    "email": "david.martinez@example.com",
+    "position": "Warehouse Supervisor",
+    "salary": 4000
+  },
+  {
+    "employee_id": 4,
+    "first_name": "Jessica",
+    "last_name": "Jones",
+    "email": "jessica.jones@example.com",
+    "position": "Cashier",
+    "salary": 25000
+  },
+  {
+    "employee_id": 5,
+    "first_name": "Christopher",
+    "last_name": "Taylor",
+    "email": "christopher.taylor@example.com",
+    "position": "Security Guard",
+    "salary": 35000
+  },
+  {
+    "employee_id": 7,
+    "first_name": "Macho",
+    "last_name": "mac",
+    "email": "mc.com",
+    "position": "Manager",
+    "salary": 50000
+  },
+  {
+    "employee_id": 9,
+    "first_name": "Vasyl",
+    "last_name": "Peleshko",
+    "email": "vasylpeleshko13@gmail.com",
+    "position": "Developer",
+    "salary": 50000
+  }
+]

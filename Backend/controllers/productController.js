@@ -1,5 +1,9 @@
 const Product = require("../models/productModel.js");
-
+const pdfService = require('../services/pdf-service.js');
+const pdf = require('html-pdf');
+const pdfTemplate = require('../documents');
+const path = require('path');
+const fs = require('fs');
 
 exports.getAllProducts = async (req, res) => {
     try {
@@ -14,6 +18,12 @@ exports.getAllProducts = async (req, res) => {
             supplier_id: product.supplier_id
         }));
         
+        const jsonContent = JSON.stringify(responseBody, null, 2);
+
+        const filePath = path.join(__dirname, '../documents/products.json');
+    
+        fs.writeFileSync(filePath, jsonContent);
+
         res.status(200).json(responseBody);
     } catch (error) {
         console.error('Error:', error);
@@ -69,7 +79,7 @@ exports.createProduct = async (req, res) => {
     try {
         console.log('Creating a new product');
         
-       
+        
         const { product_id } = req.body;
         console.log(product_id);
         const productID = product_id.product_id;
@@ -156,3 +166,21 @@ exports.deleteProduct = async (req, res) => {
         return res.status(500).json({ message: 'Internal Server Error' });
     }
 };
+
+
+exports.createPdf = async (req, res) => {
+    console.log(1);
+    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
+        if(err) {
+            res.send(Promise.reject());
+        }
+
+        res.send(Promise.resolve());
+    });
+}
+
+
+exports.fetchPdf = async (req, res) => {
+    const filePath = path.join(__dirname, '../result.pdf');
+    res.sendFile(filePath);
+}

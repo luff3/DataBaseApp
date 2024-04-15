@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash   } from '@fortawesome/free-solid-svg-icons';
 import UpdateProductModal from './UpdateProductModal.jsx';
 import AddProduct from './AddProduct.jsx';
-import { getProductData, deleteProduct } from '../../services/productServices.js'
+import { getProductData, deleteProduct, createAndDownloadPdf} from '../../services/productServices.js'
 
 
 const ProductSection = ({ text, icon: Icon }) => { 
@@ -78,6 +78,16 @@ const ProductSection = ({ text, icon: Icon }) => {
     };
     
 
+    const handleDownload = async () => {
+        try {
+            await createAndDownloadPdf(dataTable);
+            toast.success("Products downloaded successfully");
+        } catch (error) {
+            console.error('Error downloading PDF:', error);
+            toast.error(error.response?.data?.message || "Error downloading PDF");
+        }
+    };        
+
     return(
         <div className='content-container'>
             <ToastContainer />
@@ -101,7 +111,7 @@ const ProductSection = ({ text, icon: Icon }) => {
                     <button className='buttons-add' onClick={() => setShowAddProductModal(true)}>
                         <a className='button-text'>Add Product</a>
                     </button>
-                    <button className='buttons-download'><a className='button-text'>Download</a></button>
+                    <button className='buttons-download'><a className='button-text' onClick={() => handleDownload()}>Download</a></button>
                 </div>
                 <div className='table-section'>
                     <table className='table'>

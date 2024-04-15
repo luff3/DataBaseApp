@@ -1,5 +1,6 @@
 const Employee = require('../models/employeeModel.js')
-
+const path = require('path');
+const fs = require('fs');
 
 exports.getAllEmployees = async (req, res) => {
     try {
@@ -13,6 +14,12 @@ exports.getAllEmployees = async (req, res) => {
             position: employee.position,
             salary: employee.salary
         }));
+
+        const jsonContent = JSON.stringify(responseBody, null, 2);
+
+        const filePath = path.join(__dirname, '../documents/employees.json');
+    
+        fs.writeFileSync(filePath, jsonContent);
         
         res.status(200).json(responseBody);
     } catch (error) {
