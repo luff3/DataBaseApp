@@ -134,8 +134,10 @@ const ProductSection = ({ text, icon: Icon }) => {
                                     <td>{data.product_specific_id}</td>
                                     <td>{data.supplier_id}</td>
                                     <td>
-                                        <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.product_id)}  />
-                                        <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.product_id)} />
+                                        <div className='icons-container'>
+                                            <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.product_id)}  />
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </div>
                                     </td>
                                 </tr>
                             ))}

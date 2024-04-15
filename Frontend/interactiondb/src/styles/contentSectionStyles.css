@@ -134,3 +134,13 @@
     padding-right: 2rem;
     margin-bottom: 5rem;
 }
+
+.icons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+}
