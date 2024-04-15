@@ -1,5 +1,6 @@
 const Customer = require('../models/customerModel.js')
-
+const path = require('path');
+const fs = require('fs');
 
 exports.getAllCustomers = async (req, res) => {
     try {
@@ -12,6 +13,12 @@ exports.getAllCustomers = async (req, res) => {
             email: customer.email,
             phone: customer.phone
         }));
+
+        const jsonContent = JSON.stringify(responseBody, null, 2);
+
+        const filePath = path.join(__dirname, '../documents/customers.json');
+    
+        fs.writeFileSync(filePath, jsonContent);
         
         res.status(200).json(responseBody);
     } catch (error) {
@@ -68,8 +75,9 @@ exports.getCustomerById = async (req, res) => {
 exports.createCustomer = async (req, res) => {
     try {
         console.log('Creating a new customer');
-        console.log(req.body);
-        const { customer_id, first_name, last_name, email, phone} = req.body;
+        const { customer_id } = req.body;
+        const customerID = customer_id.customer_id;
+        const { first_name, last_name, email, phone} = customer_id;
         if (!customer_id || !first_name || !last_name || !email || !phone) {
             return res.status(400).json({
                 error: 'Something is missing',
@@ -77,7 +85,7 @@ exports.createCustomer = async (req, res) => {
         }
     
         const newCustomer = await Customer.create({
-            customer_id,
+            customerID,
             first_name,
             last_name,
             email,

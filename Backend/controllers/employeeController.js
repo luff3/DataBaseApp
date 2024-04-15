@@ -1,5 +1,6 @@
 const Employee = require('../models/employeeModel.js')
-
+const path = require('path');
+const fs = require('fs');
 
 exports.getAllEmployees = async (req, res) => {
     try {
@@ -13,6 +14,12 @@ exports.getAllEmployees = async (req, res) => {
             position: employee.position,
             salary: employee.salary
         }));
+
+        const jsonContent = JSON.stringify(responseBody, null, 2);
+
+        const filePath = path.join(__dirname, '../documents/employees.json');
+    
+        fs.writeFileSync(filePath, jsonContent);
         
         res.status(200).json(responseBody);
     } catch (error) {
@@ -71,7 +78,9 @@ exports.createEmployee = async (req, res) => {
     try {
         console.log('Creating a new employee');
         console.log(req.body);
-        const { employee_id, first_name, last_name, email, position, salary} = req.body;
+        const { employee_id } = req.body;
+        const employeeId = employee_id.employee_id;
+        const {first_name, last_name, email, position, salary} = employee_id;
         if (!employee_id || !first_name || !last_name || !email || !position || !salary) {
             return res.status(400).json({
                 error: 'Something is missing',
@@ -79,7 +88,7 @@ exports.createEmployee = async (req, res) => {
         }
     
         const newEmployee = await Employee.create({
-            employee_id,
+            employeeId,
             first_name,
             last_name,
             email,

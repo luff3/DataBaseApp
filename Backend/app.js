@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors'); // Імпортуйте пакет корс
 const app = express();
+const bodyParser = require('body-parser');
 const sequelize = require ('../Backend/config/db.js')
 const cookieParser = require('cookie-parser');
 const { logger } = require('./middleware/logEvents.js');
@@ -13,6 +14,8 @@ app.use(logger);
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 const registerRouter = require('./routes/registerRouter.js')
 app.use('/register', registerRouter);
 
