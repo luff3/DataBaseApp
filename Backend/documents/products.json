@@ -1,114 +1,37 @@
 [
   {
-    "product_id": 1,
-    "product_name": "Running Shoes",
-    "amount": 53,
-    "product_specific_id": 3,
-    "supplier_id": 2
+    "product_id": 6,
+    "product_name": "Sally Jacket A231",
+    "amount": 100,
+    "product_specific_id": 16,
+    "supplier_id": 6
   },
   {
-    "product_id": 2,
-    "product_name": "Basketball Shoes Blue",
-    "amount": 30,
-    "product_specific_id": 3,
-    "supplier_id": 2
-  },
-  {
-    "product_id": 3,
-    "product_name": "Soccer Cleats Green",
-    "amount": 20,
-    "product_specific_id": 3,
-    "supplier_id": 3
-  },
-  {
-    "product_id": 4,
-    "product_name": "Casual Shoes Yellow",
-    "amount": 40,
-    "product_specific_id": 4,
-    "supplier_id": 4
-  },
-  {
-    "product_id": 5,
-    "product_name": "Sandals Black",
-    "amount": 60,
-    "product_specific_id": 5,
-    "supplier_id": 5
+    "product_id": 7,
+    "product_name": "Scirt A230",
+    "amount": 80,
+    "product_specific_id": 17,
+    "supplier_id": 6
   },
   {
     "product_id": 8,
-    "product_name": "Casual Shoes Yellow4",
-    "amount": 40,
-    "product_specific_id": 4,
-    "supplier_id": 4
+    "product_name": "Sweatshirt Salana W120",
+    "amount": 73,
+    "product_specific_id": 18,
+    "supplier_id": 7
+  },
+  {
+    "product_id": 9,
+    "product_name": "Sweatshirt Alukso K111",
+    "amount": 89,
+    "product_specific_id": 19,
+    "supplier_id": 8
   },
   {
     "product_id": 10,
-    "product_name": "Casual Shoes Yellow125",
-    "amount": 40,
-    "product_specific_id": 4,
-    "supplier_id": 4
-  },
-  {
-    "product_id": 11,
-    "product_name": "Casual Shoes Yellow8",
-    "amount": 40,
-    "product_specific_id": 4,
-    "supplier_id": 4
-  },
-  {
-    "product_id": 13,
-    "product_name": "Casual Shoes Yellow12",
-    "amount": 40,
-    "product_specific_id": 4,
-    "supplier_id": 4
-  },
-  {
-    "product_id": 14,
-    "product_name": "Shoes",
-    "amount": 9,
-    "product_specific_id": 2,
-    "supplier_id": 3
-  },
-  {
-    "product_id": 15,
-    "product_name": "vass",
-    "amount": 4,
-    "product_specific_id": 2,
-    "supplier_id": 2
-  },
-  {
-    "product_id": 17,
-    "product_name": "trousers sponge bob",
-    "amount": 25,
-    "product_specific_id": 4,
-    "supplier_id": 2
-  },
-  {
-    "product_id": 18,
-    "product_name": "trousers sponge bob2",
-    "amount": 25,
-    "product_specific_id": 4,
-    "supplier_id": 2
-  },
-  {
-    "product_id": 19,
-    "product_name": "trousers sponge bob3",
-    "amount": 25,
-    "product_specific_id": 4,
-    "supplier_id": 2
-  },
-  {
-    "product_id": 20,
-    "product_name": "trousers sponge bob4",
-    "amount": 25,
-    "product_specific_id": 4,
-    "supplier_id": 3
-  },
-  {
-    "product_id": 21,
-    "product_name": "Sponge Bob",
-    "amount": 25,
-    "product_specific_id": 4,
-    "supplier_id": 4
+    "product_name": "T-shirt Kutie Anime A11",
+    "amount": 119,
+    "product_specific_id": 20,
+    "supplier_id": 8
   }
 ]

@@ -1,0 +1,25 @@
+.statistic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28%;
+    height: 6rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: linear-gradient(45deg, #c7b2e5a2, #bfb3e1a4, #b0b6dc88);
+    border-radius: 1rem;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2); /* Додаємо тінь */
+}
+
+.statisctic-description{
+    color: #6D617D;
+    font-size: 18px;
+}
+
+.statistic-value{
+    font-size: 24px;
+    font-weight: 500;
+    color: #534764;
+}
+
