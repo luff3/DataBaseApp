@@ -25,7 +25,7 @@ const AddEmployee = ({ show, onClose, onAddSuccess }) => {
             onClose();
         }).catch((error) =>{
             console.log(error.response.data.message);
-            toast.error('Error adding customer'); 
+            toast.error(error.response.data.message); 
         })
     };
 

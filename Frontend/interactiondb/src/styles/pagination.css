@@ -1,0 +1,21 @@
+.page-item{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(218, 186, 220, 0.211);
+    border-radius: 0.5rem;
+    border: none;
+    border: 1px solid #412d4583;
+}
+
+.page-item.active {
+    background: linear-gradient(45deg, #C7B2E5, #BFB3E1, #B0B6DC);
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}

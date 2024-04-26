@@ -10,6 +10,7 @@ import { faEdit, faTrash   } from '@fortawesome/free-solid-svg-icons';
 import UpdateProductModal from './UpdateProductModal.jsx';
 import AddProduct from './AddProduct.jsx';
 import { getProductData, deleteProduct, createAndDownloadPdf} from '../../services/productServices.js'
+import Pagination from '../Pagination.jsx';
 
 
 const ProductSection = ({ text, icon: Icon }) => { 
@@ -18,7 +19,8 @@ const ProductSection = ({ text, icon: Icon }) => {
     const [selectedProductId, setSelectedProductId] = useState(null);
     const [updateSuccess, setUpdateSuccess] = useState(false);
     const [showAddProductModal, setShowAddProductModal] = useState(false);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(200);    
 
     useEffect(()=>{
         getData();
@@ -80,13 +82,20 @@ const ProductSection = ({ text, icon: Icon }) => {
 
     const handleDownload = async () => {
         try {
-            await createAndDownloadPdf(dataTable);
+            const limitedData = dataTable.slice(0, 1000);
+            await createAndDownloadPdf(limitedData);
             toast.success("Products downloaded successfully");
         } catch (error) {
             console.error('Error downloading PDF:', error);
             toast.error(error.response?.data?.message || "Error downloading PDF");
         }
     };        
+
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = dataTable.slice(indexOfFirstPost, indexOfLastPost);
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return(
         <div className='content-container'>
@@ -126,7 +135,7 @@ const ProductSection = ({ text, icon: Icon }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {dataTable.map((data, index) => (
+                            {currentPosts.map((data, index) => (
                                 <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
                                     <td>{data.product_id}</td>
                                     <td>{data.product_name}</td>
@@ -150,6 +159,11 @@ const ProductSection = ({ text, icon: Icon }) => {
                         productId={selectedProductId} 
                     />
                     <AddProduct show={showAddProductModal} onClose={() => setShowAddProductModal(false)} onAddSuccess={handleAddSuccess}/>
+                    <Pagination
+                        postsPerPage={postsPerPage}
+                        totalPosts={dataTable.length}
+                        paginate={paginate}
+                    />
                 </div>
             </div>
         </div>

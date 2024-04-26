@@ -10,6 +10,7 @@ import { faEdit, faTrash   } from '@fortawesome/free-solid-svg-icons';
 import UpdateEmployeeModal from './UpdateEmployeeModal.jsx';
 import AddEmployee from './AddEmployee.jsx';
 import { getEmployeeData,  deleteEmployee } from '../../services/employeeServices.js'
+import Pagination from '../Pagination.jsx';
 
 
 const EmployeeSection = ({ text, icon: Icon }) => { 
@@ -18,11 +19,13 @@ const EmployeeSection = ({ text, icon: Icon }) => {
     const [selectedEmployeeId, setSelectedEmployeeId] = useState(null);
     const [updateSuccess, setUpdateSuccess] = useState(false);
     const [showAddCustomerModal, setShowAddCustomerModal] = useState(false);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(100);
 
     useEffect(()=>{
         getData();
     },[updateSuccess])
+
 
 
     const getData = () => {
@@ -72,6 +75,13 @@ const EmployeeSection = ({ text, icon: Icon }) => {
         getData();    
     };
 
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = dataTable.slice(indexOfFirstPost, indexOfLastPost);
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
+
     
     return(
         <div className='content-container'>
@@ -112,7 +122,7 @@ const EmployeeSection = ({ text, icon: Icon }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {dataTable.map((data, index) => (
+                            {currentPosts.map((data, index) => (
                                 <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
                                     <td>{data.employee_id}</td>
                                     <td>{data.first_name}</td>
@@ -135,6 +145,11 @@ const EmployeeSection = ({ text, icon: Icon }) => {
                         employeeId={selectedEmployeeId} 
                     />
                     <AddEmployee show={showAddCustomerModal} onClose={() => setShowAddCustomerModal(false)} onAddSuccess={handleAddSuccess}/>
+                    <Pagination
+                        postsPerPage={postsPerPage}
+                        totalPosts={dataTable.length}
+                        paginate={paginate}
+                    />
                 </div>
             </div>
         </div>

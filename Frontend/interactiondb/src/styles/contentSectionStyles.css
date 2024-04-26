@@ -8,6 +8,7 @@
     top:0;
     height: 100%;
     overflow-y: auto;
+    
 }
 
 .header-section{
@@ -131,6 +132,7 @@
 .table-section {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 0.5rem;
     padding-left: 2rem;
     padding-right: 2rem;

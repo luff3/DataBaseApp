@@ -9,6 +9,8 @@ import { faEdit, faTrash   } from '@fortawesome/free-solid-svg-icons';
 import UpdateCustomerModal from './UpdateCustomerModal.jsx';
 import AddEmployee from './AddCustomer.jsx';
 import { getCustomerData,  deleteCustomer } from '../../services/customerServices.js'
+import Pagination from '../Pagination.jsx';
+import { handleLogout } from '../../services/logOut.js'
 
 
 const ContentSection = ({ text, icon: Icon }) => { 
@@ -17,7 +19,8 @@ const ContentSection = ({ text, icon: Icon }) => {
     const [selectedCustomerId, setSelectedCustomerId] = useState(null);
     const [updateSuccess, setUpdateSuccess] = useState(false);
     const [showAddCustomerModal, setShowAddCustomerModal] = useState(false);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(100);    
 
     useEffect(()=>{
         getData();
@@ -72,6 +75,13 @@ const ContentSection = ({ text, icon: Icon }) => {
         getData();    
     };
 
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = dataTable.slice(indexOfFirstPost, indexOfLastPost);
+
+    const paginate = pageNumber => setCurrentPage(pageNumber);
+
+
     return(
         <div className='content-container'>
             <ToastContainer />
@@ -85,7 +95,7 @@ const ContentSection = ({ text, icon: Icon }) => {
                         <a className='user-name'>Vasylko Peleshko</a>
                         <a className='user-role'>Admin</a>
                     </div>
-                    <button className='log-out-button'>
+                    <button className='log-out-button'  onClick={handleLogout}>
                         <FiLogOut className='log-out-icon' /> {/* Замінюємо іконку на FiLogOut */}
                     </button>
                 </div>
@@ -110,7 +120,7 @@ const ContentSection = ({ text, icon: Icon }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {dataTable.map((data, index) => (
+                            {currentPosts.map((data, index) => (
                                 <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
                                     <td>{data.customer_id}</td>
                                     <td>{data.first_name}</td>
@@ -132,6 +142,11 @@ const ContentSection = ({ text, icon: Icon }) => {
                         customerId={selectedCustomerId} 
                     />
                     <AddEmployee show={showAddCustomerModal} onClose={() => setShowAddCustomerModal(false)} onAddSuccess={handleAddSuccess}/>
+                    <Pagination
+                        postsPerPage={postsPerPage}
+                        totalPosts={dataTable.length}
+                        paginate={paginate}
+                    />
                 </div>
             </div>
         </div>

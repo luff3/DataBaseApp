@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import revenueData from "./revenueData.json";
-import amountOrderData from "./amountOrderData.json"
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import '../../styles/chartStyles.css'; 
+import { getStatistic } from '../../services/statisticServices.js'
 
 const AmountChart = () => {
+  const [amountOrderData, setaAmountOrderData] = useState([]);
+
+  useEffect(()=>{
+    getData();
+  },[])
+
+const getData = () => {
+  getStatistic()
+  .then((data) => {
+    setaAmountOrderData(data);
+    console.log(data);
+  })
+  .catch((error) => {
+      console.log(error);
+  });
+}
+
   return (
     <div className="dataCard revenueCard">
       <Line
