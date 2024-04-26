@@ -29,6 +29,9 @@ app.use(verifyJWT);
 const customerRouter = require('./routes/customersRouter.js');
 app.use('/customer', customerRouter);
 
+const statisticRouter = require('./routes/staticticRouter.js');
+app.use('/statistic', statisticRouter);
+
 const employeeRouter = require('./routes/employeesRouter.js');
 app.use('/employee', employeeRouter);
 

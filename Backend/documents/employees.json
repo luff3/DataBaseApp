@@ -40,6 +40,14 @@
     "salary": 35000
   },
   {
+    "employee_id": 6,
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john1.doe@example.com",
+    "position": "Manager",
+    "salary": 1000
+  },
+  {
     "employee_id": 7,
     "first_name": "Macho",
     "last_name": "mac",
@@ -48,11 +56,1083 @@
     "salary": 50000
   },
   {
+    "employee_id": 8,
+    "first_name": "Alice",
+    "last_name": "Smith",
+    "email": "al1ice.smith@example.com",
+    "position": "Sales Associate",
+    "salary": 1200
+  },
+  {
     "employee_id": 9,
-    "first_name": "Vasyl",
+    "first_name": "Vasyl2",
     "last_name": "Peleshko",
     "email": "vasylpeleshko13@gmail.com",
     "position": "Developer",
     "salary": 50000
+  },
+  {
+    "employee_id": 10,
+    "first_name": "Michael",
+    "last_name": "Johnson",
+    "email": "m1ichael.johnson@example.com",
+    "position": "Customer Service Representative",
+    "salary": 1500
+  },
+  {
+    "employee_id": 11,
+    "first_name": "Paul",
+    "last_name": "Casey",
+    "email": "paul.casey.1@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 12,
+    "first_name": "Danielle",
+    "last_name": "Sandoval",
+    "email": "danielle.sandoval.2@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 13,
+    "first_name": "Tina",
+    "last_name": "Andrews",
+    "email": "tina.andrews.3@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 14,
+    "first_name": "Tara",
+    "last_name": "Clark",
+    "email": "tara.clark.4@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 15,
+    "first_name": "Anthony",
+    "last_name": "Campos",
+    "email": "anthony.campos.5@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 16,
+    "first_name": "Kelly",
+    "last_name": "Wade",
+    "email": "kelly.wade.6@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 17,
+    "first_name": "Anthony",
+    "last_name": "Smith",
+    "email": "anthony.smith.7@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 18,
+    "first_name": "George",
+    "last_name": "Short",
+    "email": "george.short.8@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 19,
+    "first_name": "Stanley",
+    "last_name": "Gutierrez",
+    "email": "stanley.gutierrez.9@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 20,
+    "first_name": "Audrey",
+    "last_name": "Simpson",
+    "email": "audrey.simpson.10@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 21,
+    "first_name": "Gabrielle",
+    "last_name": "White",
+    "email": "gabrielle.white.11@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 22,
+    "first_name": "Clinton",
+    "last_name": "Randolph",
+    "email": "clinton.randolph.12@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 23,
+    "first_name": "Patricia",
+    "last_name": "Gomez",
+    "email": "patricia.gomez.13@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 24,
+    "first_name": "Pamela",
+    "last_name": "Jackson",
+    "email": "pamela.jackson.14@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 25,
+    "first_name": "Laura",
+    "last_name": "Jackson",
+    "email": "laura.jackson.15@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 26,
+    "first_name": "Roger",
+    "last_name": "Wiley",
+    "email": "roger.wiley.16@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 27,
+    "first_name": "Vicki",
+    "last_name": "Thompson",
+    "email": "vicki.thompson.17@gslingacademy.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 28,
+    "first_name": "Maxwell",
+    "last_name": "Davidson",
+    "email": "maxwell.davidson.18@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 29,
+    "first_name": "Jonathan",
+    "last_name": "Werner",
+    "email": "jonathan.werner.19@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 30,
+    "first_name": "Angela",
+    "last_name": "Rios",
+    "email": "angela.rios.20@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 31,
+    "first_name": "Tim",
+    "last_name": "Nichols",
+    "email": "tim.nichols.21@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 32,
+    "first_name": "Kyle",
+    "last_name": "Willis",
+    "email": "kyle.willis.22@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 33,
+    "first_name": "Shannon",
+    "last_name": "Simpson",
+    "email": "shannon.simpson.23@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 34,
+    "first_name": "Sean",
+    "last_name": "Griffin",
+    "email": "sean.griffin.24@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 35,
+    "first_name": "Cassandra",
+    "last_name": "West",
+    "email": "cassandra.west.25@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 36,
+    "first_name": "Patricia",
+    "last_name": "Chavez",
+    "email": "patricia.chavez.26@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 37,
+    "first_name": "Jason",
+    "last_name": "Williams",
+    "email": "jason.williams.27@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 38,
+    "first_name": "Peter",
+    "last_name": "Gibbs",
+    "email": "peter.gibbs.28@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 39,
+    "first_name": "Jeffrey",
+    "last_name": "Blanchard",
+    "email": "jeffrey.blanchard.29@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 40,
+    "first_name": "Carol",
+    "last_name": "Hill",
+    "email": "carol.hill.30@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 41,
+    "first_name": "Angie",
+    "last_name": "Miller",
+    "email": "angie.miller.31@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 42,
+    "first_name": "Cynthia",
+    "last_name": "Knapp",
+    "email": "cynthia.knapp.32@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 43,
+    "first_name": "Timothy",
+    "last_name": "Bryant",
+    "email": "timothy.bryant.33@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 44,
+    "first_name": "Phyllis",
+    "last_name": "Diaz",
+    "email": "phyllis.diaz.34@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 45,
+    "first_name": "Lisa",
+    "last_name": "Burns",
+    "email": "lisa.burns.35@gslingacademy.com",
+    "position": "Cashier",
+    "salary": 1500
+  },
+  {
+    "employee_id": 46,
+    "first_name": "Kelly",
+    "last_name": "Farley",
+    "email": "kelly.farley.36@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 47,
+    "first_name": "Ryan",
+    "last_name": "Lee",
+    "email": "ryan.lee.37@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 48,
+    "first_name": "Michael",
+    "last_name": "Gilmore",
+    "email": "michael.gilmore.38@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 49,
+    "first_name": "Miguel",
+    "last_name": "Martinez",
+    "email": "miguel.martinez.39@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 50,
+    "first_name": "Christopher",
+    "last_name": "Taylor",
+    "email": "christopher.taylor.40@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 51,
+    "first_name": "Emily",
+    "last_name": "Holloway",
+    "email": "emily.holloway.41@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 52,
+    "first_name": "Jesus",
+    "last_name": "Rasmussen",
+    "email": "jesus.rasmussen.42@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 53,
+    "first_name": "Lauren",
+    "last_name": "Farmer",
+    "email": "lauren.farmer.43@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 54,
+    "first_name": "Pamela",
+    "last_name": "Cole",
+    "email": "pamela.cole.44@gslingacademy.com",
+    "position": "Assistant Manager",
+    "salary": 3500
+  },
+  {
+    "employee_id": 55,
+    "first_name": "David",
+    "last_name": "Gillespie",
+    "email": "david.gillespie.45@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 56,
+    "first_name": "Kenneth",
+    "last_name": "Davis",
+    "email": "kenneth.davis.46@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 57,
+    "first_name": "Elizabeth",
+    "last_name": "Martin",
+    "email": "elizabeth.martin.47@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 58,
+    "first_name": "Billy",
+    "last_name": "Soto",
+    "email": "billy.soto.48@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 59,
+    "first_name": "Kimberly",
+    "last_name": "Kelly",
+    "email": "kimberly.kelly.49@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 60,
+    "first_name": "Sonia",
+    "last_name": "Noble",
+    "email": "sonia.noble.50@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 61,
+    "first_name": "Christopher",
+    "last_name": "Stewart",
+    "email": "christopher.stewart.51@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 62,
+    "first_name": "Sandra",
+    "last_name": "Thornton",
+    "email": "sandra.thornton.52@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 63,
+    "first_name": "Luke",
+    "last_name": "Shannon",
+    "email": "luke.shannon.53@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 64,
+    "first_name": "Lindsay",
+    "last_name": "Pruitt",
+    "email": "lindsay.pruitt.54@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 65,
+    "first_name": "Jamie",
+    "last_name": "Taylor",
+    "email": "jamie.taylor.55@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 66,
+    "first_name": "Jennifer",
+    "last_name": "Murphy",
+    "email": "jennifer.murphy.56@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 67,
+    "first_name": "Melissa",
+    "last_name": "Lee",
+    "email": "melissa.lee.57@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 68,
+    "first_name": "David",
+    "last_name": "Vaughn",
+    "email": "david.vaughn.58@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 69,
+    "first_name": "Jacob",
+    "last_name": "Hanson",
+    "email": "jacob.hanson.59@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 70,
+    "first_name": "Casey",
+    "last_name": "May",
+    "email": "casey.may.60@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 71,
+    "first_name": "Michelle",
+    "last_name": "Roman",
+    "email": "michelle.roman.61@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 72,
+    "first_name": "Brittany",
+    "last_name": "Koch",
+    "email": "brittany.koch.62@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 73,
+    "first_name": "Brian",
+    "last_name": "Lewis",
+    "email": "brian.lewis.63@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 74,
+    "first_name": "Veronica",
+    "last_name": "Cameron",
+    "email": "veronica.cameron.64@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 75,
+    "first_name": "Eric",
+    "last_name": "Reyes",
+    "email": "eric.reyes.65@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 76,
+    "first_name": "Kristy",
+    "last_name": "Weber",
+    "email": "kristy.weber.66@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 77,
+    "first_name": "Anthony",
+    "last_name": "Smith",
+    "email": "anthony.smith.67@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 78,
+    "first_name": "Steven",
+    "last_name": "Stephens",
+    "email": "steven.stephens.68@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 79,
+    "first_name": "Henry",
+    "last_name": "Davis",
+    "email": "henry.davis.69@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 80,
+    "first_name": "Raymond",
+    "last_name": "Shea",
+    "email": "raymond.shea.70@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 81,
+    "first_name": "Jill",
+    "last_name": "Perez",
+    "email": "jill.perez.71@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 82,
+    "first_name": "Kimberly",
+    "last_name": "Bonilla",
+    "email": "kimberly.bonilla.72@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 83,
+    "first_name": "Louis",
+    "last_name": "Edwards",
+    "email": "louis.edwards.73@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 84,
+    "first_name": "Michael",
+    "last_name": "Hodge",
+    "email": "michael.hodge.74@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 85,
+    "first_name": "Anna",
+    "last_name": "Li",
+    "email": "anna.li.75@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 86,
+    "first_name": "Andrea",
+    "last_name": "Case",
+    "email": "andrea.case.76@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 87,
+    "first_name": "Jennifer",
+    "last_name": "Garcia",
+    "email": "jennifer.garcia.77@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 88,
+    "first_name": "Rhonda",
+    "last_name": "Davenport",
+    "email": "rhonda.davenport.78@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 89,
+    "first_name": "Chelsea",
+    "last_name": "Craig",
+    "email": "chelsea.craig.79@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 90,
+    "first_name": "Shawn",
+    "last_name": "Chase",
+    "email": "shawn.chase.80@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 91,
+    "first_name": "Elizabeth",
+    "last_name": "Calhoun",
+    "email": "elizabeth.calhoun.81@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 92,
+    "first_name": "Lisa",
+    "last_name": "Harris",
+    "email": "lisa.harris.82@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 93,
+    "first_name": "Carol",
+    "last_name": "Snyder",
+    "email": "carol.snyder.83@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 94,
+    "first_name": "Charles",
+    "last_name": "Butler",
+    "email": "charles.butler.84@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 95,
+    "first_name": "James",
+    "last_name": "Dawson",
+    "email": "james.dawson.85@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 96,
+    "first_name": "Dennis",
+    "last_name": "Kim",
+    "email": "dennis.kim.86@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 97,
+    "first_name": "Jennifer",
+    "last_name": "Berry",
+    "email": "jennifer.berry.87@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 98,
+    "first_name": "Yvette",
+    "last_name": "Bridges",
+    "email": "yvette.bridges.88@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 99,
+    "first_name": "Robert",
+    "last_name": "Atkins",
+    "email": "robert.atkins.89@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 100,
+    "first_name": "William",
+    "last_name": "Brown",
+    "email": "william.brown.90@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 101,
+    "first_name": "Patrick",
+    "last_name": "Parker",
+    "email": "patrick.parker.91@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 102,
+    "first_name": "James",
+    "last_name": "Santiago",
+    "email": "james.santiago.92@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 103,
+    "first_name": "Robert",
+    "last_name": "Parsons",
+    "email": "robert.parsons.93@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 104,
+    "first_name": "Jacob",
+    "last_name": "Brown",
+    "email": "jacob.brown.94@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 105,
+    "first_name": "Natalie",
+    "last_name": "Robinson",
+    "email": "natalie.robinson.95@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 106,
+    "first_name": "Victoria",
+    "last_name": "Jones",
+    "email": "victoria.jones.96@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 107,
+    "first_name": "Natasha",
+    "last_name": "Hansen",
+    "email": "natasha.hansen.97@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 108,
+    "first_name": "Thomas",
+    "last_name": "White",
+    "email": "thomas.white.98@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 109,
+    "first_name": "Derrick",
+    "last_name": "Figueroa",
+    "email": "derrick.figueroa.99@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 110,
+    "first_name": "Kimberly",
+    "last_name": "Ward",
+    "email": "kimberly.ward.100@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 111,
+    "first_name": "Rhonda",
+    "last_name": "Jones",
+    "email": "rhonda.jones.101@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 112,
+    "first_name": "Abigail",
+    "last_name": "Perez",
+    "email": "abigail.perez.102@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 113,
+    "first_name": "James",
+    "last_name": "Yang",
+    "email": "james.yang.103@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 114,
+    "first_name": "Stephen",
+    "last_name": "Patton",
+    "email": "stephen.patton.104@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 115,
+    "first_name": "Emma",
+    "last_name": "Wright",
+    "email": "emma.wright.105@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 116,
+    "first_name": "Cynthia",
+    "last_name": "Brown",
+    "email": "cynthia.brown.106@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 117,
+    "first_name": "Erin",
+    "last_name": "Kelley",
+    "email": "erin.kelley.107@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 118,
+    "first_name": "Benjamin",
+    "last_name": "Morse",
+    "email": "benjamin.morse.108@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 119,
+    "first_name": "Alexandra",
+    "last_name": "Gibson",
+    "email": "alexandra.gibson.109@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 120,
+    "first_name": "Phillip",
+    "last_name": "Allen",
+    "email": "phillip.allen.110@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 121,
+    "first_name": "Joshua",
+    "last_name": "Gonzalez",
+    "email": "joshua.gonzalez.111@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 122,
+    "first_name": "Erin",
+    "last_name": "Jones",
+    "email": "erin.jones.112@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 123,
+    "first_name": "Charles",
+    "last_name": "Hayes",
+    "email": "charles.hayes.113@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 124,
+    "first_name": "Kelsey",
+    "last_name": "Brown",
+    "email": "kelsey.brown.114@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 125,
+    "first_name": "Robert",
+    "last_name": "Turner",
+    "email": "robert.turner.115@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 126,
+    "first_name": "Robert",
+    "last_name": "Hill",
+    "email": "robert.hill.116@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 127,
+    "first_name": "Alyssa",
+    "last_name": "Ritter",
+    "email": "alyssa.ritter.117@gslingacademy.com",
+    "position": "Salses Associate",
+    "salary": 2000
+  },
+  {
+    "employee_id": 128,
+    "first_name": "Beth",
+    "last_name": "Bell",
+    "email": "beth.bell.118@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 129,
+    "first_name": "Andrew",
+    "last_name": "Dixon",
+    "email": "andrew.dixon.119@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 130,
+    "first_name": "Crystal",
+    "last_name": "Walker",
+    "email": "crystal.walker.120@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 131,
+    "first_name": "Jordan",
+    "last_name": "Bennett",
+    "email": "jordan.bennett.121@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 132,
+    "first_name": "Antonio",
+    "last_name": "Caldwell",
+    "email": "antonio.caldwell.122@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 133,
+    "first_name": "Jacob",
+    "last_name": "Reyes",
+    "email": "jacob.reyes.123@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 134,
+    "first_name": "Wendy",
+    "last_name": "Lewis",
+    "email": "wendy.lewis.124@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 135,
+    "first_name": "Jennifer",
+    "last_name": "Miller",
+    "email": "jennifer.miller.125@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 136,
+    "first_name": "Lisa",
+    "last_name": "Ware",
+    "email": "lisa.ware.126@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 137,
+    "first_name": "Brian",
+    "last_name": "Lee",
+    "email": "brian.lee.127@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 138,
+    "first_name": "Mario",
+    "last_name": "Taylor",
+    "email": "mario.taylor.128@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 139,
+    "first_name": "Amanda",
+    "last_name": "Williamson",
+    "email": "amanda.williamson.129@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 140,
+    "first_name": "Michael",
+    "last_name": "Miller",
+    "email": "michael.miller.130@gslingacademy.com",
+    "position": "Guard",
+    "salary": 3000
+  },
+  {
+    "employee_id": 141,
+    "first_name": "Vasyl",
+    "last_name": "Unknown",
+    "email": "vasunkl@gmail.com",
+    "position": "Manager",
+    "salary": 5000
+  },
+  {
+    "employee_id": 142,
+    "first_name": "Khris",
+    "last_name": "Hryshkanych",
+    "email": "khris@gmail.com",
+    "position": "Manager",
+    "salary": 5000
   }
 ]

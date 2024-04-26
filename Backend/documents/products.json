@@ -2,7 +2,7 @@
   {
     "product_id": 1,
     "product_name": "Running Shoes",
-    "amount": 53,
+    "amount": 54,
     "product_specific_id": 3,
     "supplier_id": 2
   },
@@ -103,12 +103,5 @@
     "amount": 25,
     "product_specific_id": 4,
     "supplier_id": 3
-  },
-  {
-    "product_id": 21,
-    "product_name": "Sponge Bob",
-    "amount": 25,
-    "product_specific_id": 4,
-    "supplier_id": 4
   }
 ]

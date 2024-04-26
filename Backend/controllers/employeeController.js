@@ -21,7 +21,7 @@ exports.getAllEmployees = async (req, res) => {
     
         fs.writeFileSync(filePath, jsonContent);
         
-        res.status(200).json(responseBody);
+        res.status(200).json(employees);
     } catch (error) {
         console.error('Error:', error);
         res.status(500).json({
