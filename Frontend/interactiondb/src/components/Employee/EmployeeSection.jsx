@@ -77,7 +77,7 @@ const EmployeeSection = ({ text, icon: Icon }) => {
         <div className='content-container'>
             <ToastContainer/>
             <div className='header-section'>
-                <a className='header-text'>Employyes</a>
+                <a className='header-text'>Employees</a>
                 <div className='user-section'>
                     <div className='image-header-container'>
                         <img  src={manAvatar} alt='nike logo' className='user-pic'/> 

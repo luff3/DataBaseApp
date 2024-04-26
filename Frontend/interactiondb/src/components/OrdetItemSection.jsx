@@ -11,6 +11,18 @@ const OrderItemSection = ({ text, icon: Icon }) => {
         { order_item_id: 1, order_id: '2', product_id: '50'},
         { order_item_id: 1, order_id: '2', product_id: '50'},
         { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
+        { order_item_id: 1, order_id: '2', product_id: '50'},
 
     ];
     

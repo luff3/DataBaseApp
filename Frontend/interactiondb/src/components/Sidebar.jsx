@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/sidebar.css'; 
-import { FaUserFriends, FaUserTie, FaShoppingCart, FaBoxOpen, FaCube } from 'react-icons/fa';
+import { FaUserFriends, FaUserTie, FaShoppingCart, FaBoxOpen, FaCube, FaChartBar } from 'react-icons/fa';
 import logoPic from '../images/nike.png';
 import Option from './Option';
 import { Link,  Outlet, useLocation } from 'react-router-dom';
@@ -29,6 +29,9 @@ const Sidebar = ({ text, icon: Icon }) => {
                 </Link>
                 <Link to="/orderitem" className="option-link">
                     <Option text="Order Items" icon={FaBoxOpen} isActive={activeOption === '/orderitem'} onClick={() => setActiveOption('/orderitem')}></Option>
+                </Link>
+                <Link to="/statistic" className="option-link">
+                    <Option text="Statistics" icon={FaChartBar} isActive={activeOption === '/statistic'} onClick={() => setActiveOption('/statistic')}></Option>
                 </Link>
             </div>
             <Outlet />

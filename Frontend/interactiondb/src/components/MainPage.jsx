@@ -7,6 +7,7 @@ import ProductSection from './Product/ProductSection.jsx';
 import EmployeeSection from './Employee/EmployeeSection.jsx';
 import OrderSection from './OrderSection.jsx';
 import OrderItemSection from './OrdetItemSection.jsx';
+import StatistcSection from './Statistics/StatisticSection.jsx';
 import LoginPage from './LoginPage.jsx'
 import manAvatar from '../images/man-avatar.png';
 
@@ -30,6 +31,7 @@ const MainPage = () => {
                             <Route path="employee" element={<EmployeeSection />} />
                             <Route path="order" element={<OrderSection />} />
                             <Route path="orderitem" element={<OrderItemSection />} />
+                            <Route path="statistic" element={<StatistcSection />}/>
                             </Route>
                         </Routes>
                 </BrowserRouter>
