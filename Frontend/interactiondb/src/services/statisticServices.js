@@ -17,8 +17,8 @@ export const getTotalForLastMonth = async () => {
         console.log(response);
         return response.data;
 } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
+        console.error('Error fetching data:', error);
+        throw error;
     }
 };
 
@@ -28,30 +28,42 @@ export const getMostPopularClothes = async () => {
         console.log(response);
         return response.data;
 } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
+        console.error('Error fetching data:', error);
+        throw error;
     }
 };
 
 
-export const getTopEmployee= async () => {
+export const getTopEmployee = async () => {
     try {
         const response = await axios.get(`${API_URL}/employee`, header);
         console.log(response);
         return response.data;
 } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
+        console.error('Error fetching data:', error);
+        throw error;
     }
 };
 
-export const getStatistic= async () => {
+export const getStatistic = async () => {
     try {
         const response = await axios.get(`${API_URL}`, header);
         console.log(response.data);
         return response.data;
 } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
+        console.error('Error fetching data:', error);
+        throw error;
     }
 };
+
+
+export const getStatisticPerMonth = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/moneyPerMonth`, header);
+        console.log(response.data);
+        return response.data;
+} catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
+}

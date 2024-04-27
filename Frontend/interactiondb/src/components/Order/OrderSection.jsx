@@ -3,33 +3,33 @@ import '../../styles/mainPageStyles.css';
 import '../../styles/contentSectionStyles.css'
 import { FiLogOut } from 'react-icons/fi'; 
 import manAvatar from '../../images/man-avatar.png';
+import '../../styles/customersTableStyles.css'; 
 import { toast, ToastContainer } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash   } from '@fortawesome/free-solid-svg-icons';
-import UpdateCustomerModal from './UpdateCustomerModal.jsx';
-import AddEmployee from './AddCustomer.jsx';
-import { getCustomerData,  deleteCustomer } from '../../services/customerServices.js'
+import UpdateOrderModal from './UpdateOrderModal.jsx';
+import AddOrder from './AddOrder.jsx';
+import { getOrderData,  deleteOrder } from '../../services/orderService.js'
 import Pagination from '../Pagination.jsx';
 import { handleLogout } from '../../services/logOut.js'
 
-
-const ContentSection = ({ text, icon: Icon, username } ) => { 
+const OrderSection = ({ text, icon: Icon, username }) => { 
     const [dataTable, setData] = useState([]);
     const [showModal, setShowModal] = useState(false);
-    const [selectedCustomerId, setSelectedCustomerId] = useState(null);
+    const [selectedOrderId, setSelectedOrderId] = useState(null);
     const [updateSuccess, setUpdateSuccess] = useState(false);
     const [showAddCustomerModal, setShowAddCustomerModal] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(100);    
+    const [postsPerPage] = useState(100);
 
     useEffect(()=>{
         getData();
-        console.log(username);
     },[updateSuccess])
 
 
+
     const getData = () => {
-        getCustomerData()
+        getOrderData()
         .then((data) => {
             setData(data);
             console.log(data);
@@ -44,20 +44,19 @@ const ContentSection = ({ text, icon: Icon, username } ) => {
     };
     
 
-    const handleEdit = (customerId) => {
-        console.log(customerId);
-        setSelectedCustomerId(customerId);
-        //handleUpdateSuccess(false);
+    const handleEdit = (orderId) => {
+        console.log(orderId);
+        setSelectedOrderId(orderId);
         setUpdateSuccess(false)
         console.log("Click icon update", updateSuccess);
         setShowModal(true);
     };
 
-    const handleDelete = (customerId) => {
-        console.log('In delete', customerId);
-        deleteCustomer(customerId)
+    const handleDelete = (orderId) => {
+        console.log('In delete', orderId);
+        deleteOrder(orderId)
         .then((data) => {
-            toast.success('Customer deleted successfully');
+            toast.success('Order deleted successfully');
             getData(); 
         })
         .catch((error) => {
@@ -83,11 +82,12 @@ const ContentSection = ({ text, icon: Icon, username } ) => {
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
 
+    
     return(
         <div className='content-container'>
-            <ToastContainer />
+            <ToastContainer/>
             <div className='header-section'>
-                <a className='header-text'>Customers</a>
+                <a className='header-text'>Orders</a>
                 <div className='user-section'>
                     <div className='image-header-container'>
                         <img  src={manAvatar} alt='nike logo' className='user-pic'/> 
@@ -96,15 +96,15 @@ const ContentSection = ({ text, icon: Icon, username } ) => {
                         <a className='user-name'>{username}</a>
                         {/* <a className='user-role'>Admin</a> */}
                     </div>
-                    <button className='log-out-button'  onClick={handleLogout}>
-                        <FiLogOut className='log-out-icon' /> {/* Замінюємо іконку на FiLogOut */}
+                    <button className='log-out-button' onClick={handleLogout}>
+                        <FiLogOut className='log-out-icon' /> 
                     </button>
                 </div>
             </div>
             <div className='main-section'>
                 <div className='buttons-section'>
                     <button className='buttons-add' onClick={() => setShowAddCustomerModal(true)}>
-                        <a className='button-text'>Add Customer</a>
+                        <a className='button-text'>Add Order</a>
                     </button>
                     <button className='buttons-download'><a className='button-text'>Download</a></button>
                 </div>
@@ -112,37 +112,37 @@ const ContentSection = ({ text, icon: Icon, username } ) => {
                     <table className='table'>
                         <thead>
                             <tr>
-                                <th style={{ width: '10%' }}>Customer ID</th>
-                                <th style={{ width: '23.5%' }}>First Name</th>
-                                <th style={{ width: '23.5%' }}>Last Name</th>
-                                <th style={{ width: '23.5%' }}>Email</th>
-                                <th style={{ width: '15.5%' }}>Phone</th>
-                                <th style={{ width: '10%' }}>Action</th>
+                                <th style={{ width: '15%' }}>Order ID</th>
+                                <th style={{ width: '15%' }}>Customer ID</th>
+                                <th style={{ width: '15%' }}>Employee ID</th>
+                                <th style={{ width: '15%' }}>Total Amount</th>
+                                <th style={{ width: '25%' }}>Order Date</th>
+                                <th style={{ width: '15%' }}>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {currentPosts.map((data, index) => (
                                 <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
+                                    <td>{data.order_id}</td>
                                     <td>{data.customer_id}</td>
-                                    <td>{data.first_name}</td>
-                                    <td>{data.last_name}</td>
-                                    <td>{data.email}</td>
-                                    <td>{data.phone}</td>
+                                    <td>{data.employee_id}</td>
+                                    <td>{data.total_amount}</td>
+                                    <td>{data.order_date}</td>
                                     <td>
-                                        <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.customer_id)}  />
-                                        <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.customer_id)} />
+                                        <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.order_id)}  />
+                                        <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.order_id)} />
                                     </td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-                    <UpdateCustomerModal 
+                    <UpdateOrderModal 
                         show={showModal} 
                         onClose={handleCloseModal} 
                         onUpdateSuccess={handleUpdateSuccess}
-                        customerId={selectedCustomerId} 
+                        orderId={selectedOrderId} 
                     />
-                    <AddEmployee show={showAddCustomerModal} onClose={() => setShowAddCustomerModal(false)} onAddSuccess={handleAddSuccess}/>
+                    <AddOrder show={showAddCustomerModal} onClose={() => setShowAddCustomerModal(false)} onAddSuccess={handleAddSuccess}/>
                     <Pagination
                         postsPerPage={postsPerPage}
                         totalPosts={dataTable.length}
@@ -155,7 +155,7 @@ const ContentSection = ({ text, icon: Icon, username } ) => {
 }
 
 
-export default ContentSection;
+export default OrderSection;
 
 
 

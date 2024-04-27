@@ -84,3 +84,28 @@ exports.getMostPurchasedProduct = async(req, res) => {
         });
     }
 }
+
+
+exports.GetPriceTotalAmountByMonth = async(req, res) => {
+    try {
+        const results = await sequelize.query('SELECT * FROM GetPriceTotalAmountByMonth();', {
+            type: Sequelize.QueryTypes.SELECT
+        });
+
+        results.sort((a, b) => {
+            if (a.MonthYear < b.MonthYear) return -1;
+            if (a.MonthYear > b.MonthYear) return 1;
+            return 0;
+        });
+        console.log(results);
+        res.status(200).json(results);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({
+            body: {
+            status: 'error',
+            message: 'Internal Server Error',
+            },
+        });
+    }
+}

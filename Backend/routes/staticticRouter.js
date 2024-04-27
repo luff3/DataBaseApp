@@ -10,6 +10,7 @@ router.route('/').get(statisticController.getOrderCountsByMonth);
 router.route('/employee').get(statisticController.getTopSellingEmployee);
 router.route('/lastMonth').get(statisticController.getTotalSalesForLastMonth);
 router.route('/mostPopular').get(statisticController.getMostPurchasedProduct);
+router.route('/moneyPerMonth').get(statisticController.GetPriceTotalAmountByMonth);
 
 
 module.exports = router;

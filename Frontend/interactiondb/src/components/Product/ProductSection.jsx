@@ -11,16 +11,17 @@ import UpdateProductModal from './UpdateProductModal.jsx';
 import AddProduct from './AddProduct.jsx';
 import { getProductData, deleteProduct, createAndDownloadPdf} from '../../services/productServices.js'
 import Pagination from '../Pagination.jsx';
+import { handleLogout } from '../../services/logOut.js'
 
 
-const ProductSection = ({ text, icon: Icon }) => { 
+const ProductSection = ({ text, icon: Icon, username }) => { 
     const [dataTable, setData] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [selectedProductId, setSelectedProductId] = useState(null);
     const [updateSuccess, setUpdateSuccess] = useState(false);
     const [showAddProductModal, setShowAddProductModal] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(200);    
+    const [postsPerPage] = useState(170);    
 
     useEffect(()=>{
         getData();
@@ -107,10 +108,10 @@ const ProductSection = ({ text, icon: Icon }) => {
                         <img  src={manAvatar} alt='nike logo' className='user-pic'/> 
                     </div>
                     <div className='text-container'>
-                        <a className='user-name'>Vasylko Peleshko</a>
-                        <a className='user-role'>Admin</a>
+                        <a className='user-name'>{username}</a>
+                        {/* <a className='user-role'>Admin</a> */}
                     </div>
-                    <button className='log-out-button'>
+                    <button className='log-out-button' onClick={handleLogout}>
                         <FiLogOut className='log-out-icon' /> {/* Замінюємо іконку на FiLogOut */}
                     </button>
                 </div>

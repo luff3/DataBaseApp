@@ -63,9 +63,14 @@ exports.getOrderItemById = async (req, res) => {
 
 exports.createOrderItem = async (req, res) => {
     try {
-        console.log('Creating a new order');
+        console.log('Creating a new orderItem');
         console.log(req.body);
+
+        // const { order_item_id } = req.body;
+        // const orderItemID = order_item_id.order_item_id;
         const { order_id, product_id} = req.body;
+        console.log(order_id, product_id);
+
         if ( !order_id || !product_id) {
             return res.status(400).json({
                 error: 'Something is missing',
@@ -75,17 +80,10 @@ exports.createOrderItem = async (req, res) => {
         const newOrderItem = await OrderItem.create({
             order_id,
             product_id,
-        },{
-            fields: ['order_id', 'product_id']
-        });
+        }, { fields: ['order_id', 'product_id'], returning: false, hasTrigger: true });
+        
     
-        const responseBody = {
-            order_item_id: newOrderItem.order_item_id,
-            order_id: newOrderItem.order_id,
-            product_id: newOrderItem.product_id,
-        };
-    
-        res.status(201).json(responseBody);
+        res.status(201).json(newOrderItem);
     
     } catch (error) {
         console.error('Error:', error);

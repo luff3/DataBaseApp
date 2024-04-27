@@ -3,10 +3,11 @@ import { Chart as ChartJS, defaults } from "chart.js/auto";
 import revenueData from "./revenueData.json";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
 import '../../styles/chartStyles.css'; 
-import { getStatistic } from '../../services/statisticServices.js'
+import { getStatistic, getStatisticPerMonth } from '../../services/statisticServices.js'
 
 const AmountChart = () => {
   const [amountOrderData, setaAmountOrderData] = useState([]);
+  const [moneyPerMonth, setMoneyPerMonth] = useState([]);
 
   useEffect(()=>{
     getData();
@@ -21,6 +22,15 @@ const getData = () => {
   .catch((error) => {
       console.log(error);
   });
+
+  getStatisticPerMonth().then((data) => {
+    setMoneyPerMonth(data);
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
 }
 
   return (
@@ -35,12 +45,12 @@ const getData = () => {
               backgroundColor: "#064FF0",
               borderColor: "#064FF0",
             },
-            // {
-            //   label: "Cost",
-            //   data: revenueData.map((data) => data.cost),
-            //   backgroundColor: "#FF3030",
-            //   borderColor: "#FF3030",
-            // },
+            {
+              label: "Money Per Month",
+              data: moneyPerMonth.map((data) => data.TotalAmount),
+              backgroundColor: "#FF3030",
+              borderColor: "#FF3030",
+            },
           ],
         }}
         options={{

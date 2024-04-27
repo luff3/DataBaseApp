@@ -11,9 +11,9 @@ import UpdateEmployeeModal from './UpdateEmployeeModal.jsx';
 import AddEmployee from './AddEmployee.jsx';
 import { getEmployeeData,  deleteEmployee } from '../../services/employeeServices.js'
 import Pagination from '../Pagination.jsx';
+import { handleLogout } from '../../services/logOut.js'
 
-
-const EmployeeSection = ({ text, icon: Icon }) => { 
+const EmployeeSection = ({ text, icon: Icon, username}) => { 
     const [dataTable, setData] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [selectedEmployeeId, setSelectedEmployeeId] = useState(null);
@@ -93,10 +93,10 @@ const EmployeeSection = ({ text, icon: Icon }) => {
                         <img  src={manAvatar} alt='nike logo' className='user-pic'/> 
                     </div>
                     <div className='text-container'>
-                        <a className='user-name'>Vasylko Peleshko</a>
-                        <a className='user-role'>Admin</a>
+                        <a className='user-name'>{username}</a>
+                        {/* <a className='user-role'>Admin</a> */}
                     </div>
-                    <button className='log-out-button'>
+                    <button className='log-out-button' onClick={handleLogout}>
                         <FiLogOut className='log-out-icon' /> 
                     </button>
                 </div>

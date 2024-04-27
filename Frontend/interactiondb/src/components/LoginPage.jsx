@@ -7,8 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = ({ onLogin }) => {
     const [formData, setFormData] = useState({
-        user: '', // залишили як user
-        pwd: '' // залишили як pwd
+        user: '', 
+        pwd: '' 
     });
 
     const handleChange = event => {
@@ -23,7 +23,7 @@ const LoginPage = ({ onLogin }) => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:3000/auth', formData); // Відправлення POST запиту на шлях '/login' з даними форми
-            onLogin(true);
+            onLogin(true, formData.user); // Додайте formData.user як другий аргумент
             console.log('Відповідь від сервера:', response.data.accessToken);
             document.cookie = `accessToken=${response.data.accessToken}; path=/;`
         } catch (error) {

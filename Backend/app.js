@@ -28,8 +28,12 @@ const refreshRouter = require('./routes/refreshRouter.js');
 app.use('/refresh', refreshRouter);
 
 app.use(verifyJWT);
+
 const customerRouter = require('./routes/customersRouter.js');
 app.use('/customer', customerRouter);
+
+const productSpecificRouter = require('./routes/productSpecificRouter.js');
+app.use('/productSpecific', productSpecificRouter);
 
 const statisticRouter = require('./routes/staticticRouter.js');
 app.use('/statistic', statisticRouter);
