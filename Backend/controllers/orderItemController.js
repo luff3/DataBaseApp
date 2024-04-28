@@ -1,5 +1,6 @@
 const OrderItem = require('../models/orderItemModel.js');
-
+const path = require('path');
+const fs = require('fs');
 
 exports.getAllOrderItems = async (req, res) => {
     try {
@@ -11,6 +12,12 @@ exports.getAllOrderItems = async (req, res) => {
             product_id: orderItem.product_id,
         }));
         
+        const jsonContent = JSON.stringify(responseBody, null, 2);
+
+        const filePath = path.join(__dirname, '../documents/orderItem.json');
+    
+        fs.writeFileSync(filePath, jsonContent);
+
         res.status(200).json(responseBody);
     } catch (error) {
         console.error('Error:', error);

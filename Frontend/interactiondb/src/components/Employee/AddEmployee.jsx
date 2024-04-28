@@ -37,10 +37,6 @@ const AddCustomer = ({ show, onClose, onAddSuccess }) => {
                 <div className='modal-content'>
                     <a className='head-text text-style'>Add Employee</a>
                     <div className='property-section'>
-                        <label className='label text-style'>Employee ID:</label>
-                        <input className='text-input text-style' type="text" value={employee_id} onChange={e => setEmployeeId(e.target.value)} />
-                    </div>
-                    <div className='property-section'>
                         <label className='label text-style'>First Name:</label>
                         <input className='text-input text-style' type="text" value={first_name} onChange={e => setCustomerName(e.target.value)} />
                     </div>

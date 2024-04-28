@@ -2,7 +2,7 @@
   {
     "customer_id": 1,
     "first_name": "John",
-    "last_name": "Loh",
+    "last_name": "Doe",
     "email": "john.doe@example.com",
     "phone": "1234567890"
   },
@@ -11901,7 +11901,7 @@
   },
   {
     "customer_id": 1703,
-    "first_name": "Simeon2",
+    "first_name": "Simeon",
     "last_name": "Pittman",
     "email": "simeon.pittman@bilearner.com",
     "phone": "9121454417"

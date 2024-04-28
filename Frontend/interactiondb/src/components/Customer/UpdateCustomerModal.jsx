@@ -38,7 +38,7 @@ const UpdateCustomerModal = ({ show, onClose, customerId, onUpdateSuccess }) => 
         })
         .catch((error) => {
             console.log(error);
-            toast.error('Error updating customer'); 
+            toast.error(error.response.data.message); 
         });
         onClose();
     };

@@ -128,9 +128,11 @@ const OrderSection = ({ text, icon: Icon, username }) => {
                                     <td>{data.employee_id}</td>
                                     <td>{data.total_amount}</td>
                                     <td>{data.order_date}</td>
-                                    <td>
+                                    <td >
+                                        <div className='icons-container'>
                                         <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.order_id)}  />
                                         <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.order_id)} />
+                                        </div>
                                     </td>
                                 </tr>
                             ))}

@@ -3,7 +3,7 @@ const verifyRoles = (...allowedRoles) => {
         if (!req?.roles) return res.sendStatus(401);
         const rolesArray = [...allowedRoles];
         const result = req.roles.map(role => rolesArray.includes(role)).find(val => val === true);
-        if (!result) return  res.status(400).json({ message: 'Ти лох в тебе прав нема' });
+        if (!result) return  res.status(400).json({ message: 'You have no permissions' });
         next();
     }
 }

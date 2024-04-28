@@ -124,8 +124,10 @@ const OrderItemSection = ({ text, icon: Icon, username }) => {
                                     <td>{data.order_id}</td>
                                     <td>{data.product_id}</td>
                                     <td>
-                                        <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.order_item_id)}  />
-                                        <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.order_item_id)} />
+                                        <div className='icons-container'>
+                                            <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.order_item_id)}  />
+                                            <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.order_item_id)} />
+                                        </div>
                                     </td>
                                 </tr>
                             ))}

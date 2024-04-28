@@ -131,8 +131,10 @@ const EmployeeSection = ({ text, icon: Icon, username}) => {
                                     <td>{data.position}</td>
                                     <td>{data.salary}</td>
                                     <td>
-                                        <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.employee_id)}  />
-                                        <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.employee_id)} />
+                                        <div className='icons-container'>
+                                            <FontAwesomeIcon icon={faEdit} onClick={() => handleEdit(data.employee_id)}  />
+                                            <FontAwesomeIcon icon={faTrash} onClick={() => handleDelete(data.employee_id)} />
+                                        </div>
                                     </td>
                                 </tr>
                             ))}

@@ -9,6 +9,7 @@ import OrderSection from './Order/OrderSection.jsx';
 import OrderItemSection from './OrderItem/OrdetItemSection.jsx';
 import StatistcSection from './Statistics/StatisticSection.jsx';
 import LoginPage from './LoginPage.jsx'
+import ProductSpecificSection from './ProductSpecific/ProsuctSpecificSection.jsx';
 import manAvatar from '../images/man-avatar.png';
 
 const MainPage = () => {
@@ -34,6 +35,7 @@ const MainPage = () => {
                             <Route path="employee" element={<EmployeeSection username={username}/>} />
                             <Route path="order" element={<OrderSection username={username}/>} />
                             <Route path="orderitem" element={<OrderItemSection username={username}/>} />
+                            <Route path="prodSpec" element={<ProductSpecificSection username={username}/>}/>
                             <Route path="statistic" element={<StatistcSection username={username}/>}/>
                             </Route>
                         </Routes>

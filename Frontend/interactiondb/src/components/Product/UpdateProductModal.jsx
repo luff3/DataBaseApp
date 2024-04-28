@@ -38,7 +38,7 @@ const UpdateProductModal = ({ show, onClose, productId, onUpdateSuccess }) => {
         })
         .catch((error) => {
             console.log(error);
-            toast.error('Error updating product'); 
+            toast.error(error.response.data.message); 
         });
         onClose();
     };

@@ -1,15 +1,15 @@
 [
   {
     "product_id": 1,
-    "product_name": "Running Shoes2",
-    "amount": 54,
+    "product_name": "Running Shoes",
+    "amount": 55,
     "product_specific_id": 3,
     "supplier_id": 2
   },
   {
     "product_id": 2,
-    "product_name": "Basketball Shoes Blue",
-    "amount": 30,
+    "product_name": "Basketball Shoes White",
+    "amount": 28,
     "product_specific_id": 3,
     "supplier_id": 2
   },
@@ -30,7 +30,7 @@
   {
     "product_id": 5,
     "product_name": "Sandals Black",
-    "amount": 60,
+    "amount": 59,
     "product_specific_id": 5,
     "supplier_id": 5
   },
@@ -4433,7 +4433,7 @@
   {
     "product_id": 650,
     "product_name": "Socks A160",
-    "amount": 173,
+    "amount": 172,
     "product_specific_id": 1263,
     "supplier_id": 1
   },
@@ -4447,7 +4447,7 @@
   {
     "product_id": 652,
     "product_name": "Hat A674",
-    "amount": 56,
+    "amount": 55,
     "product_specific_id": 749,
     "supplier_id": 3
   },
@@ -15115,7 +15115,7 @@
   {
     "product_id": 2176,
     "product_name": "Dress A792",
-    "amount": 72,
+    "amount": 73,
     "product_specific_id": 1119,
     "supplier_id": 3
   },
@@ -27372,7 +27372,7 @@
   {
     "product_id": 3927,
     "product_name": "Sweater A893",
-    "amount": 72,
+    "amount": 73,
     "product_specific_id": 1911,
     "supplier_id": 2
   },

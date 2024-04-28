@@ -32,6 +32,7 @@ const StatistcSection = () => {
             console.log(data.TotalSalesForLastMonth);
         })
         .catch((error) => {
+            toast.error( error.response.data.message); 
             console.log(error);
         });
     }
@@ -89,7 +90,7 @@ const StatistcSection = () => {
                     </div>
                 </div>
                 <div className='chart-section'>
-                    <a className='diagram-head-text'>Order flow diagram</a>
+                    <a className='diagram-head-text'>Statistic flow diagram</a>
                     <div className='chart-container'>
                         <AmountChart/>
                     </div>

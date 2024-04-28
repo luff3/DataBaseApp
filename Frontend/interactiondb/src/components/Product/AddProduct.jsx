@@ -25,7 +25,7 @@ const AddProduct = ({ show, onClose, onAddSuccess }) => {
             onClose();
         }).catch((error) =>{
             console.log(error.response.data.message);
-            toast.error('Error adding product'); 
+            toast.error(error.response.data.message); 
         })
     };
 
@@ -35,10 +35,6 @@ const AddProduct = ({ show, onClose, onAddSuccess }) => {
                 <span className="close" onClick={onClose}>&times;</span>
                 <div className='modal-content'>
                     <a className='head-text text-style'>Add Product</a>
-                    <div className='property-section'>
-                        <label className='label text-style'>Product ID:</label>
-                        <input className='text-input text-style' type="text" value={product_id} onChange={e => setProductId(e.target.value)} />
-                    </div>
                     <div className='property-section'>
                         <label className='label text-style'>Product Name:</label>
                         <input className='text-input text-style' type="text" value={product_name} onChange={e => setProductName(e.target.value)} />
